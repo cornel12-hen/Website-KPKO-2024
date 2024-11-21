@@ -11,9 +11,150 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
-<body class="min-w-md h-full bg-[#E3D8C6]">
+<body class="min-w-md h-full w-screen bg-[#E3D8C6] overflow-hidden overflow-y-scroll">
     <x-navbar></x-navbar>
-    <main class="grid grid-cols-[4.8vw_auto_25vw] gap-[0.5vw] h-full m-5 rounded-lg">
+    <main class="lg:hidden flex flex-col gap-2 p-8">
+        <div class="h-full bg-black rounded-lg pt-[1.2vh]">
+            <form action="{{ route('modal') }}" method="GET" class="flex items-center justify-center gap-[1.2vh] pb-[1.2vh]">
+                @csrf
+                <button type="submit" name="load" value="0" class="w-[5.6vh] h-[5.6vh] flex justify-center items-center">
+                    <img src="img/atasan_2.png" alt="" class="w-[3vh] h-[3vh]">
+                </button>
+                <button type="submit" name="load" value="1" class="w-[5.6vh] h-[5.6vh] rounded-lg flex justify-center items-center">
+                    <p class="text-[4.5vh] text-white font-bold mt-[0.1vh] font-display3">1</p>
+                </button>
+                <button type="submit" name="load" value="2" class="w-[5.6vh] h-[5.6vh] rounded-lg flex justify-center items-center">
+                    <p class="text-[4.5vh] text-white font-bold mt-[0.1vh] font-display3">2</p>
+                </button>
+            </form>       
+        </div>
+        <div class="flex flex-col h-[90%] bg-black rounded-lg bg-gradient-to-b from-10% from-biru3 to-70% to-black -mb-5">
+            <div class="flex flex-col w-full h-[33vh] p-6 gap-6 mb-[1vh] items-center">
+                <img src="{{ asset($data['foto2']) }}" loading="lazy" class="w-[36vh] h-[36vh] rounded-lg">
+                <div class="flex flex-col text-white -mt-2 w-full px-4">
+                    <p class="font-medium text-[3vw] mt-[1.2vh]">For You Page!</p>
+                    <p class="text-[8vw] font-extrabold font-display3 -mt-[1vh]">{{ $data['nomor_urut'] }}</p>
+                    <p class="font-medium text-[2.25vw] font-display3 -mt-[0.6vh]">OSISTEL, MPK, and more</p>
+                    <p class="font-medium text-[2.25vw] text-slate-300 mt-2">Made for You | SMK Telkom Purwokerto Hall, 22 November 2024</p>
+                </div>
+            </div>
+            <div class="flex flex-col bg-black/20 w-full h-[31vh] p-6 rounded-lg mt-[40vw] overflow-y-scroll">
+                <div class="flex justify-between px-4">
+                    <div class="flex gap-[2.7vw] items-center">
+                        <img src="img/pausestart.png" alt="" class="h-[9vw] w-[9vw] mr-[0.2vw]">
+                        <img src="img/Shuffle.png" alt="" class="h-[6vw] w-[5.4vw]">
+                        <img src="img/plus.png" alt="" class="h-[5.1vw] w-[5.1vw]">
+                        <img src="img/down.png" alt="" class="h-[5.1vw] w-[5.1vw]">
+                        <img src="img/dot.png" alt="" class="h-auto w-[4.5vw]">
+                    </div>
+                </div>
+                <div class="grid items-center gap-[1vw] grid-cols-[1fr_8fr_6fr_7fr] text-white px-4 mb-[1vh] w-full mt-[4vh]">
+                    <p>#</p>
+                    <p class="text-[1.8vh]">Title</p>
+                    <p class="text-[1.8vh]">Album</p>
+                    <p class="text-[1.8vh]">Date</p>
+                </div>
+                <hr class="border-[0.5px] border-slate-800">
+
+                <div id="modal-trigger-visi-android" class="grid gap-[1.5vw] grid-cols-[1fr_8fr_6fr_7fr] text-white px-4 w-full mt-[2vh] items-center hover:bg-gray-800 py-[0.8vw] hover:cursor-pointer">
+                    <p>1</p>
+                    <div class="flex gap-[0.8vw]">
+                        <img src="{{ asset($data['foto1']) }}" alt="" loading="lazy" class="w-[7.5vw] h-[7.5vw] rounded-md">
+                        <div>
+                            <p class="text-[3vw] font-medium">{{ $data['visi'] }}</p>
+                            <p class="text-[2.1vw] text-slate-400 font-medium">{{ Str::limit($data['nama'], 12) }}</p>
+                        </div>
+                    </div>
+                    <p class="text-[2.55vw] font-medium">E-KPKO 2024</p>
+                    <p class="text-[2.55vw] font-medium">22 November 2024</p>
+                </div>
+
+                <div id="modal-trigger-misi-android" class="grid gap-[1.5vw] grid-cols-[1fr_8fr_6fr_7fr] text-white px-4 w-full mt-[2vh] items-center hover:bg-gray-800 py-[0.8vw] hover:cursor-pointer">
+                    <p>1</p>
+                    <div class="flex gap-[0.8vw]">
+                        <img src="{{ asset($data['foto1']) }}" alt="" loading="lazy" class="w-[7.5vw] h-[7.5vw] rounded-md">
+                        <div>
+                            <p class="text-[3vw] font-medium">{{ $data['misi'] }}</p>
+                            <p class="text-[2.1vw] text-slate-400 font-medium">{{ Str::limit($data['nama'], 12) }}</p>
+                        </div>
+                    </div>
+                    <p class="text-[2.55vw] font-medium">E-KPKO 2024</p>
+                    <p class="text-[2.55vw] font-medium">22 November 2024</p>
+                </div>
+            </div>
+            {{-- <div>
+                <img src="img/top.png" alt="" class="h-[20vh] rounded-b-lg">
+            </div> --}}
+        </div>
+
+        {{-- Modal --}}
+        {!! $data['kode2'] !!}
+
+        <div id="modal-visi-android" class="overflow-y-scroll hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 justify-center items-center z-50">
+            <div class="rounded-lg shadow-lg w-[80vw] h-[90vh] max-w-lg overflow-y-auto">
+                <div class="bg-black rounded-t-lg rounded-b-none h-[45%] overflow-hidden">
+                    <img src="{{ asset($data['foto3']) }}" alt="" loading="lazy" class="w-full h-fit object-cover">
+                </div> 
+                <div class="bg-black px-[5%] py-[4%] text-justify">
+                    <p class="w-full text-white font-bold text-2xl font-body whitespace-pre-wrap">
+{{ $data['nomor_urut'] ?? 'Tidak ada data' }} 
+                    </p>
+                    <p class="mb-[1.2vw] w-full text-white text-[15px] font-medium font-body whitespace-pre-wrap">
+{{ $data['visi'] }}:
+{{ $data['isivisi'] ?? 'Tidak ada data' }}   
+                    </p>
+                    <button id="close-modal-visi-android" class="mt-3 bg-biru3 text-white rounded-lg px-4 py-2 cursor-pointer">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-misi-android" class="overflow-y-scroll hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 justify-center items-center z-50">
+            <div class="rounded-lg shadow-lg w-[60vw] h-[90vh] max-w-lg overflow-y-auto">
+                <div class="bg-black rounded-t-lg rounded-b-none h-[45%] overflow-hidden">
+                    <img src="{{ asset($data['foto3']) }}" alt="" loading="lazy" class="w-full h-fit object-cover">
+                </div> 
+                <div class="bg-black px-[3%] py-[4%] text-justify">
+                    <p class="w-full text-white font-bold text-2xl font-body whitespace-pre-wrap">
+{{ $data['nomor_urut'] ?? 'Tidak ada data' }} 
+                    </p>
+                    <p class="mb-[1.2vw] w-full text-white text-[15px] font-medium font-body whitespace-pre-wrap">
+{{ $data['misi'] }}:
+{{ $data['isimisi'] ?? 'Tidak ada data' }}   
+                    </p>
+                    <button id="close-modal-misi-android" class="mt-3 bg-biru3 text-white rounded-lg px-4 py-2 cursor-pointer">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="modal-confirm-android" class="overflow-y-scroll hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 justify-center items-center z-50">
+            <div class="rounded-lg shadow-lg w-[80vw] h-[90vh] max-w-lg overflow-y-auto">
+                <div class="bg-black rounded-t-lg rounded-b-none h-[45%] overflow-hidden">
+                    <img src="{{ asset($data['foto1']) }}" loading="lazy" alt="" class="w-full h-fit object-cover">
+                </div> 
+                <div class="bg-black px-[5%] py-[4%] text-justify">
+                    <p class="w-full text-white font-bold text-[2vh] font-body whitespace-pre-wrap">
+Apakah kamu yakin ingin
+memilih {{ $data['nomor_urut'] ?? 'Tidak ada data' }}?
+                    </p>
+                    <div class="flex justify-around mb-[4vh]">
+                        <form action="{{ route('storeVote') }}" method="POST">
+                            @csrf
+                            <button type="submit" name="nomor_urut" value="{{ $data['id'] }}" class="font-bold mt-3 bg-biru3 text-white rounded-lg px-4 py-2 cursor-pointer">
+                                Ya
+                            </button>
+                        </form>
+                        <button id="close-modal-confirm-android" class="font-bold mt-3 bg-biru3 text-white rounded-lg px-4 py-2 cursor-pointer">
+                            Tidak
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main class="max-lg:hidden grid grid-cols-[4.8vw_auto_25vw] gap-[0.5vw] h-full m-5 rounded-lg">
         @php
             // $data = [
             //     'nomor_urut' => 'E-KPKO 2024',
@@ -192,8 +333,20 @@ Apakah kamu yakin ingin memilih
             modal.classList.add('flex'); // Pastikan flex ditambahkan untuk layout modal
         });
 
+        document.getElementById('modal-trigger-visi-android').addEventListener('click', function () {
+            const modal = document.getElementById('modal-visi-android');
+            modal.classList.remove('hidden'); // Tampilkan modal
+            modal.classList.add('flex'); // Pastikan flex ditambahkan untuk layout modal
+        });
+
         document.getElementById('modal-trigger-misi').addEventListener('click', function () {
             const modal = document.getElementById('modal-misi');
+            modal.classList.remove('hidden'); // Tampilkan modal
+            modal.classList.add('flex'); // Pastikan flex ditambahkan untuk layout modal
+        });
+
+        document.getElementById('modal-trigger-misi-android').addEventListener('click', function () {
+            const modal = document.getElementById('modal-misi-android');
             modal.classList.remove('hidden'); // Tampilkan modal
             modal.classList.add('flex'); // Pastikan flex ditambahkan untuk layout modal
         });
@@ -204,8 +357,20 @@ Apakah kamu yakin ingin memilih
             modal.classList.add('hidden'); // Sembunyikan modal
         });
 
+        document.getElementById('close-modal-visi-android').addEventListener('click', function () {
+            const modal = document.getElementById('modal-visi-android');
+            modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
+            modal.classList.add('hidden'); // Sembunyikan modal
+        });
+
         document.getElementById('close-modal-misi').addEventListener('click', function () {
             const modal = document.getElementById('modal-misi');
+            modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
+            modal.classList.add('hidden'); // Sembunyikan modal
+        });
+
+        document.getElementById('close-modal-misi-android').addEventListener('click', function () {
+            const modal = document.getElementById('modal-misi-android');
             modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
             modal.classList.add('hidden'); // Sembunyikan modal
         });
@@ -216,8 +381,20 @@ Apakah kamu yakin ingin memilih
             modal.classList.add('flex'); // Sembunyikan modal
         });
 
+        document.getElementById('modal-trigger-confirm-android').addEventListener('click', function () {
+            const modal = document.getElementById('modal-confirm-android');
+            modal.classList.remove('hidden'); // Hapus flex agar tidak ada konflik
+            modal.classList.add('flex'); // Sembunyikan modal
+        });
+
         document.getElementById('close-modal-confirm').addEventListener('click', function () {
             const modal = document.getElementById('modal-confirm');
+            modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
+            modal.classList.add('hidden'); // Sembunyikan modal
+        });
+
+        document.getElementById('close-modal-confirm-android').addEventListener('click', function () {
+            const modal = document.getElementById('modal-confirm-android');
             modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
             modal.classList.add('hidden'); // Sembunyikan modal
         });

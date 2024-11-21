@@ -22,7 +22,8 @@ class DataKandidatController extends Controller
         $data = null;
 
         if($raw != null){
-            $kodeHTML = Blade::render('<x-btnvote />');
+            $kodeHTML = Blade::render('<x-btnvote></x-btnvote>');
+            $kodeHTML2 = Blade::render('<x-btnvoteandroid>-android</x-btnvoteandroid>');
 
             $data = [
                 'id' => $raw -> id,
@@ -36,6 +37,7 @@ class DataKandidatController extends Controller
                 'foto2' => $raw -> foto2,
                 'foto3' => $raw -> foto1,
                 'kode' => $kodeHTML,
+                'kode2' => $kodeHTML2,
             ];
         }
         else{
@@ -48,27 +50,37 @@ class DataKandidatController extends Controller
                 'visi' => 'Peraturan',
                 'isivisi' => '
 1. Pemilih wajib menjaga ketertiban di area pemilihan.
+
 2. Pemilih hanya diperbolehkan memasuki bilik suara satu per satu.
+
 3. Setelah mencoblos, pemilih segera meninggalkan area pemilihan.
+
 4. Dilarang melakukan kampanye atau memengaruhi pilihan orang
-   lain di area pemilihan.
+lain di area pemilihan.
+
 5. Dilarang merusak fasilitas.
+
 6. Proses pencoblosan diawasi oleh panitia dan saksi dari setiap
-   kandidat untuk menjamin kelancaran dan kejujuran.',
+kandidat untuk menjamin kelancaran dan kejujuran.',
                 'misi' => 'Ketentuan',
                 'isimisi' => '
 1. Setiap siswa memiliki hak untuk memilih sesuai hati nurani tanpa
-   tekanan atau paksaan.
+tekanan atau paksaan.
+
 2. Setiap siswa hanya memiliki satu suara yang sah dan tidak dapat
-   diwakilkan.
+diwakilkan.
+
 3. Pemilih wajib membawa kartu pemilihan sebagai bukti hak suara.
+
 4. Pemilih mencoblos satu kandidat di bilik suara.
+
 5. Pemilih wajib menjaga kerahasiaan pilihannya dan tidak menyebutkan
-   pilihannya di area pemilihan.',
+pilihannya di area pemilihan.',
                 'foto1' => '/img/kpko.png',
                 'foto2' => '/img/kpko.png',
                 'foto3' => '/img/kpko1.png',
                 'kode' => '',
+                'kode2' => '',
             ];
         }
         Log::info('Data:', $data);
