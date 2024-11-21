@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body class="min-w-[480px] h-screen overflow-hidden bg-[#E3D8C6]">
     <x-navbar></x-navbar>
@@ -30,6 +31,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
                 </svg>                  
                 <input type="password" autocomplete="off" placeholder="Token" name="token" id="token" class="pl-[3.2vw] w-full h-[6.6vh] border-none ring-[1px] ring-biru3 ring-opacity-50 focus:outline-none focus:ring-[2px] focus:ring-biru3 rounded-md">
+                <button id="togglePassword" class="absolute text-right bottom-[48vh] left-[61.5%]">
+                    <i id="password-icon" class="fas fa-eye"></i>
+                </button>
                 @error('token')
                     <div class="error">{{ $message }}</div>
                 @enderror
@@ -56,5 +60,26 @@
             @endif
         </div>   
     </main>
+    <script>
+        const passwordInput = document.getElementById('token'); // Input dengan ID password-input
+        const togglePassword = document.getElementById('togglePassword'); // Tombol dengan ID toggle-password
+        const passwordIcon = document.getElementById('password-icon'); // Ikon dengan ID password-icon
+    
+        togglePassword.addEventListener('click', () => {
+            // Periksa tipe saat ini dari input
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+    
+            // Ganti ikon sesuai tipe
+            if (type === 'password') {
+                passwordIcon.classList.remove('fa-eye-slash');
+                passwordIcon.classList.add('fa-eye');
+            } else {
+                passwordIcon.classList.remove('fa-eye');
+                passwordIcon.classList.add('fa-eye-slash');
+            }
+        });
+    </script>
+        
 </body>
 </html>

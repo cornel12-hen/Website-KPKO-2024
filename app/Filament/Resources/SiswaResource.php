@@ -27,6 +27,7 @@ class SiswaResource extends Resource
                 Forms\Components\TextInput::make('username'),
                 Forms\Components\TextInput::make('token'),
                 Forms\Components\TextInput::make('kelas'),
+                Forms\Components\TextInput::make('is_voted'),
             ]);
     }
 

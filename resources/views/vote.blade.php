@@ -35,7 +35,7 @@
                     <p class="font-medium text-[3vw] mt-[1.2vh]">For You Page!</p>
                     <p class="text-[8vw] font-extrabold font-display3 -mt-[1vh]">{{ $data['nomor_urut'] }}</p>
                     <p class="font-medium text-[2.25vw] font-display3 -mt-[0.6vh]">OSISTEL, MPK, and more</p>
-                    <p class="font-medium text-[2.25vw] text-slate-300 mt-2">Made for You | SMK Telkom Purwokerto Hall, 22 November 2024</p>
+                    <p class="font-medium text-[2.25vw] text-slate-300 mt-2">Made for You | SMK Telkom Purwokerto, 22 November 2024</p>
                 </div>
             </div>
             <div class="flex flex-col bg-black/20 w-full h-[31vh] p-6 rounded-lg mt-[40vw] overflow-y-scroll">
@@ -155,16 +155,6 @@ memilih {{ $data['nomor_urut'] ?? 'Tidak ada data' }}?
         </div>
     </main>
     <main class="max-lg:hidden grid grid-cols-[4.8vw_auto_25vw] gap-[0.5vw] h-full m-5 rounded-lg">
-        @php
-            // $data = [
-            //     'nomor_urut' => 'E-KPKO 2024',
-            //     'nama' => 'OSISTEL',
-            //     'visi' => 'Peraturan',
-            //     'misi' => 'Ketentuan',
-            //     'foto1' => '/img/paslon1.jpeg',
-            //     'foto2' => '/img/paslon1s.png',
-            // ];
-        @endphp
         <div class="h-full bg-black rounded-lg pt-[1.2vh]">
             <form action="{{ route('modal') }}" method="GET" class="flex flex-col items-center gap-[1.2vh] pt-[1.2vh]">
                 @csrf
@@ -186,7 +176,7 @@ memilih {{ $data['nomor_urut'] ?? 'Tidak ada data' }}?
                     <p class="font-medium text-[2vh] mt-[1.2vh]">For You Page!</p>
                     <p class="text-[10vh] font-extrabold font-display3 -mt-[1vh]">{{ $data['nomor_urut'] }}</p>
                     <p class="font-medium text-[1.8vh] font-display3 -mt-[0.6vh]">OSISTEL, MPK, and more</p>
-                    <p class="font-medium text-[1.8vh] text-slate-300 mt-2">Made for You | SMK Telkom Purwokerto Hall, 22 November 2024</p>
+                    <p class="font-medium text-[1.8vh] text-slate-300 mt-2">Made for You | SMK Telkom Purwokerto, 22 November 2024</p>
                 </div>
             </div>
             <div class="flex flex-col bg-black/20 w-full h-[40vh] p-6 rounded-lg">
@@ -245,8 +235,8 @@ memilih {{ $data['nomor_urut'] ?? 'Tidak ada data' }}?
                 <img src="img/top.png" alt="" class="h-[20vh] rounded-b-lg">
             </div> --}}
         </div>
-        <div class="h-[500px]">
-            <div class="overflow-y-scroll bg-black rounded-lg p-5">
+        <div class="h-[600px]">
+            <div class="overflow-y-scroll bg-black h-full rounded-lg p-5">
                 <div class="flex justify-between">
                     <p class="text-white text-[2.2vh] font-bold">{{ $data['nomor_urut'] }}</p>
                     <div class="flex gap-[1.6vw] items-center">
@@ -256,7 +246,8 @@ memilih {{ $data['nomor_urut'] ?? 'Tidak ada data' }}?
                 </div>
                 <img src="{{ asset($data['foto1']) }}" alt="" class="w-full h-fit mt-5 rounded-lg">
                 <p class="text-white text-[3vh] font-bold mt-3 -mb-[0.2vh]">{{ $data['nomor_urut'] }}</p>
-                <p class="text-[1.8vh] text-slate-400 font-medium">{{ $data['nama'] }}</p> 
+                <p class="text-[1.8vh] text-slate-200 font-medium">{{ $data['nama'] }}</p> 
+                <p class="font-medium text-[1vw] text-slate-400 mt-2">SMK Telkom Purwokerto, 22 November 2024</p>
                 {!! $data['kode'] !!}
             </div>  
         </div>
@@ -268,13 +259,13 @@ memilih {{ $data['nomor_urut'] ?? 'Tidak ada data' }}?
                     <img src="{{ asset($data['foto3']) }}" alt="" loading="lazy" class="w-full h-fit object-cover">
                 </div> 
                 <div class="bg-black px-[5%] py-[4%] text-justify">
-                    <pre class="w-full text-white font-bold text-2xl font-body">
+                    <p class="w-full text-white font-bold text-2xl font-body whitespace-pre-wrap">
 {{ $data['nomor_urut'] ?? 'Tidak ada data' }} 
-                    </pre>
-                    <pre class="mb-[1.2vw] w-full text-white text-[15px] font-medium font-body">
+                    </p>
+                    <p class="mb-[1.2vw] w-full text-white text-[15px] font-medium font-body whitespace-pre-wrap">
 {{ $data['visi'] }}:
 {{ $data['isivisi'] ?? 'Tidak ada data' }}   
-                    </pre>
+                    </p>
                     <button id="close-modal-visi" class="mt-3 bg-biru3 text-white rounded-lg px-4 py-2 cursor-pointer">
                         Tutup
                     </button>
@@ -286,14 +277,14 @@ memilih {{ $data['nomor_urut'] ?? 'Tidak ada data' }}?
                 <div class="bg-black rounded-t-lg rounded-b-none h-[45%] overflow-hidden">
                     <img src="{{ asset($data['foto3']) }}" alt="" loading="lazy" class="w-full h-fit object-cover">
                 </div> 
-                <div class="bg-black px-[3%] py-[4%] text-justify">
-                    <pre class="w-full text-white font-bold text-2xl font-body">
+                <div class="bg-black px-[5%] py-[4%] text-justify">
+                    <p class="w-full text-white font-bold text-2xl font-body whitespace-pre-wrap">
 {{ $data['nomor_urut'] ?? 'Tidak ada data' }} 
-                    </pre>
-                    <pre class="mb-[1.2vw] w-full text-white text-[15px] font-medium font-body">
+                    </p>
+                    <p class="mb-[1.2vw] w-full text-white text-[15px] font-medium font-body whitespace-pre-wrap">
 {{ $data['misi'] }}:
 {{ $data['isimisi'] ?? 'Tidak ada data' }}   
-                    </pre>
+                    </p>
                     <button id="close-modal-misi" class="mt-3 bg-biru3 text-white rounded-lg px-4 py-2 cursor-pointer">
                         Tutup
                     </button>
@@ -307,10 +298,10 @@ memilih {{ $data['nomor_urut'] ?? 'Tidak ada data' }}?
                     <img src="{{ asset($data['foto1']) }}" loading="lazy" alt="" class="w-full h-fit object-cover">
                 </div> 
                 <div class="bg-black px-[3%] py-[4%] text-justify">
-                    <pre class="w-full text-white font-bold text-2xl font-body">
+                    <p class="w-full text-white font-bold text-2xl font-body whitespace-pre-wrap">
 Apakah kamu yakin ingin memilih
 {{ $data['nomor_urut'] ?? 'Tidak ada data' }}?
-                    </pre>
+                    </p>
                     <div class="flex justify-around mb-[4vh]">
                         <form action="{{ route('storeVote') }}" method="POST">
                             @csrf
