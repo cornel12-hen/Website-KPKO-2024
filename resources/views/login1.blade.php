@@ -29,11 +29,13 @@
                 @enderror
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[1.5vw] max-sm:hidden relative left-[0.85vw] top-[4.8vh] stroke-biru3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
-                </svg>                  
-                <input type="password" autocomplete="off" placeholder="Token" name="token" id="token" class="pl-[3.2vw] w-full h-[6.6vh] border-none ring-[1px] ring-biru3 ring-opacity-50 focus:outline-none focus:ring-[2px] focus:ring-biru3 rounded-md">
-                <button id="togglePassword" class="absolute text-right bottom-[48vh] left-[61.5%]">
-                    <i id="password-icon" class="fas fa-eye"></i>
-                </button>
+                </svg>      
+                <div class="flex w-full">
+                    <input type="password" autocomplete="off" placeholder="Token" name="token" id="token" class="pl-[3.2vw] w-full h-[6.6vh] border-none ring-[1px] ring-biru3 ring-opacity-50 focus:outline-none focus:ring-[2px] focus:ring-biru3 rounded-md">
+                    <button id="togglePassword" type="button" class="w-[15%]">
+                        <i id="password-icon" class="fas fa-eye"></i>
+                    </button>
+                </div>            
                 @error('token')
                     <div class="error">{{ $message }}</div>
                 @enderror

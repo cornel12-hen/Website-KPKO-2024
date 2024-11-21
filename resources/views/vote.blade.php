@@ -320,74 +320,74 @@ Apakah kamu yakin ingin memilih
     <script>
         document.getElementById('modal-trigger-visi').addEventListener('click', function () {
             const modal = document.getElementById('modal-visi');
-            modal.classList.remove('hidden'); // Tampilkan modal
-            modal.classList.add('flex'); // Pastikan flex ditambahkan untuk layout modal
+            modal.classList.remove('hidden'); 
+            modal.classList.add('flex');
         });
 
         document.getElementById('modal-trigger-visi-android').addEventListener('click', function () {
             const modal = document.getElementById('modal-visi-android');
-            modal.classList.remove('hidden'); // Tampilkan modal
-            modal.classList.add('flex'); // Pastikan flex ditambahkan untuk layout modal
+            modal.classList.remove('hidden'); 
+            modal.classList.add('flex');
         });
 
         document.getElementById('modal-trigger-misi').addEventListener('click', function () {
             const modal = document.getElementById('modal-misi');
-            modal.classList.remove('hidden'); // Tampilkan modal
-            modal.classList.add('flex'); // Pastikan flex ditambahkan untuk layout modal
+            modal.classList.remove('hidden'); 
+            modal.classList.add('flex'); 
         });
 
         document.getElementById('modal-trigger-misi-android').addEventListener('click', function () {
             const modal = document.getElementById('modal-misi-android');
-            modal.classList.remove('hidden'); // Tampilkan modal
-            modal.classList.add('flex'); // Pastikan flex ditambahkan untuk layout modal
+            modal.classList.remove('hidden'); 
+            modal.classList.add('flex'); 
         });
         
         document.getElementById('close-modal-visi').addEventListener('click', function () {
             const modal = document.getElementById('modal-visi');
-            modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
-            modal.classList.add('hidden'); // Sembunyikan modal
+            modal.classList.remove('flex'); 
+            modal.classList.add('hidden'); 
         });
 
         document.getElementById('close-modal-visi-android').addEventListener('click', function () {
             const modal = document.getElementById('modal-visi-android');
-            modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
-            modal.classList.add('hidden'); // Sembunyikan modal
+            modal.classList.remove('flex'); 
+            modal.classList.add('hidden'); 
         });
 
         document.getElementById('close-modal-misi').addEventListener('click', function () {
             const modal = document.getElementById('modal-misi');
-            modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
-            modal.classList.add('hidden'); // Sembunyikan modal
+            modal.classList.remove('flex'); 
+            modal.classList.add('hidden'); 
         });
 
         document.getElementById('close-modal-misi-android').addEventListener('click', function () {
             const modal = document.getElementById('modal-misi-android');
-            modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
-            modal.classList.add('hidden'); // Sembunyikan modal
+            modal.classList.remove('flex'); 
+            modal.classList.add('hidden'); 
         });
 
         document.getElementById('modal-trigger-confirm').addEventListener('click', function () {
             const modal = document.getElementById('modal-confirm');
-            modal.classList.remove('hidden'); // Hapus flex agar tidak ada konflik
-            modal.classList.add('flex'); // Sembunyikan modal
+            modal.classList.remove('hidden'); 
+            modal.classList.add('flex'); 
         });
 
         document.getElementById('modal-trigger-confirm-android').addEventListener('click', function () {
             const modal = document.getElementById('modal-confirm-android');
-            modal.classList.remove('hidden'); // Hapus flex agar tidak ada konflik
-            modal.classList.add('flex'); // Sembunyikan modal
+            modal.classList.remove('hidden'); 
+            modal.classList.add('flex'); 
         });
 
         document.getElementById('close-modal-confirm').addEventListener('click', function () {
             const modal = document.getElementById('modal-confirm');
-            modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
-            modal.classList.add('hidden'); // Sembunyikan modal
+            modal.classList.remove('flex'); 
+            modal.classList.add('hidden'); 
         });
 
         document.getElementById('close-modal-confirm-android').addEventListener('click', function () {
             const modal = document.getElementById('modal-confirm-android');
-            modal.classList.remove('flex'); // Hapus flex agar tidak ada konflik
-            modal.classList.add('hidden'); // Sembunyikan modal
+            modal.classList.remove('flex'); 
+            modal.classList.add('hidden'); 
         });
     </script>
     

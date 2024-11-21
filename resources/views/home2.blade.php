@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
 </head>
 <body class="flex justify-center items-center bg-coklat w-screen h-screen">
-    <main class="sm:hidden flex flex-col bg-[#E3D8C6] max-w-full max-h-full overflow-y-scroll overflow-x-hidden">
+    <main class="lg:hidden flex flex-col bg-[#E3D8C6] max-w-full max-h-full overflow-y-scroll overflow-x-hidden">
         <div class="border border-t-0 border-l-0 border-r-0 border-coklat pointer-events-none select-none no-drag">
             <img class="w-full h-full" src="img/stamp3.png" alt="">
         </div>
@@ -54,7 +54,7 @@
             <img class="w-full h-full" src="img/stamp5.png" alt="">
         </div>
     </main>
-    <main class="max-sm:hidden grid grid-cols-3 grid-rows-3 bg-[#E3D8C6] max-w-full max-h-full overflow-hidden aspect-[2897/1472]">
+    <main class="max-lg:hidden grid grid-cols-3 grid-rows-3 bg-[#E3D8C6] max-w-full max-h-full overflow-hidden aspect-[2897/1472]">
         <div class="row-span-2 border border-t-0 border-l-0 border-coklat pointer-events-none select-none no-drag">
             <img class="w-full h-full" src="img/stamp2.png" alt="">
         </div>
