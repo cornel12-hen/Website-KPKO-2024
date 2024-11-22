@@ -21,25 +21,26 @@
                 E-KPKO 2024
             </p>
         </div>
-        <div class="text-center p-6 select-none no-drag -mb-[34vh]">
+        <div class="text-center p-6 select-none no-drag -mb-[10vh] h-[70vh]">
             <p class="text-biru3 text-[2vh] font-display2 font-bold mt-5">Pemilihan Ketua OSIS</p>
             <p class="text-biru3 text-[1.3vh] font-display2 font-semibold">SMK Telkom Purwokerto</p>
-            <hr class="w-[76vw] h-[0.9vh] relative top-[2vh] left-[6vw] bg-gradient-to-r from-coklat via-coklat via-60% to-[#BCB6AA] to-60% rounded-lg">
-            <p class="text-[18vh] text-coklat relative bottom-[18.5vh] left-[7vw]">.</p>
-            <p class="font-display2 font-bold relative bottom-[24vh] right-[35vw] text-coklat text-[1.5vh]">1:23</p>
-            <p class="font-display2 font-bold relative bottom-[26.35vh] left-[34vw] text-coklat text-[1.5vh]">4:56</p>
+            <img src="img/linedot.png" class="w-[66vw] h-auto relative top-[2vh] left-[12vw] max-w-[80%]" alt="">
+            {{-- <hr class="w-[76vw] h-[0.9vh] relative top-[2vh] left-[6vw] bg-gradient-to-r from-coklat via-coklat via-60% to-[#BCB6AA] to-60% rounded-lg">
+            <p class="text-[18vh] text-coklat relative bottom-[18.5vh] left-[7vw]">.</p> --}}
+            <p class="font-display2 font-bold relative -bottom-[2.5vh] right-[29vw] text-coklat text-[1.5vh]">1:23</p>
+            <p class="font-display2 font-bold relative -bottom-[0.2vh] left-[30vw] text-coklat text-[1.5vh]">4:56</p>
             <a href="/login">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8 relative bottom-[27.2vh] left-[41vw] fill-coklat animate-color-change-scale-up">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="max-sm:size-[3vh] max-md:size-[4vh] md:size-[5vh] relative max-sm:bottom-[1.2vh] max-md:bottom-[0.9vh] md:bottom-[0.9vh] max-sm:left-[41vw] max-md:left-[44vw] md:left-[46vw] left-[41vw] fill-coklat animate-color-change-scale-up">
                     <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
                 </svg>
             </a>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 relative bottom-[30.6vh] left-[26vw] fill-coklat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="max-sm:size-[3vh] max-md:size-[4vh] md:size-[4.5vh] relative max-sm:bottom-[4.3vh] max-md:bottom-[5vh] md:bottom-[6vh] max-sm:left-[27vw] max-md:left-[30vw] md:left-[32vw] left-[26vw] fill-coklat">
                 <path fill-rule="evenodd" d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
             </svg>              
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 relative bottom-[33.7vh] left-[55.4vw] fill-coklat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="max-sm:size-[3vh] max-md:size-[4vh] md:size-[4.5vh] relative max-sm:bottom-[7.4vh] max-md:bottom-[9.1vh] md:bottom-[10.1vh] max-sm:left-[53vw] max-md:left-[56vw] md:left-[59vw] left-[26vw] fill-coklat">
                 <path fill-rule="evenodd" d="M14.47 2.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H9a5.25 5.25 0 1 0 0 10.5h3a.75.75 0 0 1 0 1.5H9a6.75 6.75 0 0 1 0-13.5h10.19l-4.72-4.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8 relative bottom-[32.1vh] left-[49vw] fill-biru3 animate-move-up-left pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="max-sm:size-[3vh] max-md:size-[4vh] md:size-[5vh] relative max-sm:bottom-[5.2vh] max-md:bottom-[7.8vh] md:bottom-[10.2vh] max-sm:left-[50vw] max-md:left-[49vw] md:left-[50vw] left-[41vw] fill-biru3 animate-move-up-left pointer-events-none">
                 <path fill-rule="evenodd" d="M12 1.5a.75.75 0 0 1 .75.75V4.5a.75.75 0 0 1-1.5 0V2.25A.75.75 0 0 1 12 1.5ZM5.636 4.136a.75.75 0 0 1 1.06 0l1.592 1.591a.75.75 0 0 1-1.061 1.06l-1.591-1.59a.75.75 0 0 1 0-1.061Zm12.728 0a.75.75 0 0 1 0 1.06l-1.591 1.592a.75.75 0 0 1-1.06-1.061l1.59-1.591a.75.75 0 0 1 1.061 0Zm-6.816 4.496a.75.75 0 0 1 .82.311l5.228 7.917a.75.75 0 0 1-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 0 1-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 0 1-1.247-.606l.569-9.47a.75.75 0 0 1 .554-.68ZM3 10.5a.75.75 0 0 1 .75-.75H6a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 10.5Zm14.25 0a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 1 0 1.5H18a.75.75 0 0 1-.75-.75Zm-8.962 3.712a.75.75 0 0 1 0 1.061l-1.591 1.591a.75.75 0 1 1-1.061-1.06l1.591-1.592a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
               </svg>
                         
