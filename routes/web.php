@@ -18,13 +18,15 @@ Route::get('/', function () {
 //     return view('apalah', ['title' => 'Vote']);
 // });
 
-
-Route::get('/login', [SiswaAuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [SiswaAuthController::class, 'login'])->name('loginpost');
+Route::get('/login', function() {
+    return view('login', ['title' => 'Login']);
+})->name('login');
+// Route::get('/login', [SiswaAuthController::class, 'showLoginForm'])->name('login');
+// Route::post('/login', [SiswaAuthController::class, 'login'])->name('loginpost');
 Route::get('/logout', [SiswaAuthController::class, 'logout'])->name('logout');
 Route::post('/vote', [VotingController::class, 'store'])->name('storeVote');
 Route::get('/befvote', [DataKandidatController::class, 'index'])->name('befvote');
-Route::get('/modal', [DataKandidatController::class, 'index'])->name('modal');
+Route::get('/modal', [DataKandidatController::class, 'index'])->name('modal');   
 
 // Route::middleware([SiswaMiddleware::class])->group(function () {
 //     Route::get('/vote', function() {
